@@ -1,6 +1,17 @@
 import express from 'express';
 import fetch from 'node-fetch';
-const Quote = (await import("inspirational-quotes")).default;
+//const Quote = (await import("inspirational-quotes")).default; LOOKS LIKE A BUG IN npm inspirational-quotes, so I am using the following instead:
+import { createRequire } from "module";
+
+const require = createRequire(import.meta.url);
+const quotes = require("inspirational-quotes/data/data.json");
+
+function randomQuote() {
+  const temp = quotes[Math.floor(Math.random() * quotes.length)];
+  return {
+    text: temp.text
+  };
+}
 const app = express();
 
 app.set("view engine", "ejs");
@@ -12,7 +23,7 @@ app.get('/', async(req, res) => {
 });
 
 app.get("/apitest", (req, res) => {
-  let quote = Quote.getQuote();
+  let quote = randomQuote();
   const params = new URLSearchParams({
     SERVICE: "WMS",
     REQUEST: "GetMap",
@@ -35,21 +46,19 @@ app.get("/apitest", (req, res) => {
 
 
 app.get('/one', (req, res) => {
- let quote = Quote.getQuote();
- console.log(quote);
- res.render('one', {quote});
+ res.render('one', {quote: randomQuote()});
 });
 
 app.get('/two', (req, res) => {
- let quote = Quote.getQuote();
+ let quote = randomQuote();
  console.log(quote);
- res.render('two', {quote});
+ res.render('two', {quote: randomQuote()});
 });
 
 app.get('/three', (req, res) => {
- let quote = Quote.getQuote();
+ let quote = randomQuote();
  console.log(quote);
- res.render('three', {quote});
+ res.render('three', {quote: randomQuote()});
 });
 
 
