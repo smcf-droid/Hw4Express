@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+
+<body>
+    <%- include('partials/nav.ejs') %>
+    <main>
+
+
+  <section>
+  <h2>What is GPS?</h2>
+
+  <figure>
+    <img class="intext-image" src="img/7414657260_a6288507a4_o.jpg" alt="A GPS Satellite">
+  </figure>
+
+  <p class="intro">
+    GPS is a satellite-based system that helps devices find their location.
+    GPS receivers use software algorithms to process satellite signal times and find a device's location, speed, and direction.
+    GPS is an integral part of modern life, used for navigation, mapping, and timing in various applications.
+    It is maintained by the United States government and is freely available to anyone with a GPS receiver.
+  </p>
+  
+  <details>
+    <summary>GPS Segments</summary>
+    <p>
+      The GPS system has three main parts- the space segment, the control segment, and the user segment. 
+      The space segment consists of 24 satellites transmitting one-way signals giving current GPS satellite position and time.
+      The control segment are the monitor and control stations maintaining satellite health and orbit.
+      The user segment includes GPS receivers, which can be found in phones, cars, and other devices.
+    </p>
+  </details>
+  <details>
+    <summary>GPS Services</summary>
+    <p>
+      GPS services are used by both military and civilian users for various applications, such as navigation, mapping, and timing synchronization.
+      Various GPS augmentation systems and techniques can enhance system performance, including accuracy, integrity, and availability.
+      When you use a map application on your phone, you are using GPS services and the map's software to determine your location and provide directions.
+      Algorithms in the software can determine the optimal route to your destination based on your current location and the map data.
+    </p>
+  </details>
+  <details>
+    <summary>The Future of GPS</summary>
+    <p>
+      As technology advances, GPS is expected to become even more accurate and reliable. 
+      The United States plan to implement features to support safety of life applications in aviation, maritime, and other critical sectors.
+    </p>
+  </details>
+  <details>
+    <summary>Sources Used</summary>
+    <ul>
+      <li><a href="https://www.gps.gov/gps">https://www.gps.gov/gps/</a></li>
+      <li><a href="https://www.gps.gov/space-segment">https://www.gps.gov/space-segment</a></li>
+      <li><a href="https://www.gps.gov/trilateration">https://www.gps.gov/trilateration</a></li>
+     <li><a href="https://www.gps.gov/gps-accuracy">https://www.gps.gov/gps-accuracy</a></li>
+     </ul>
+  </details>
+  </section>
+</main>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+<body> 
+  <%- include('partials/nav.ejs') %>
+<main>
+
+  <section>
+    <h2>Satellites and Signals</h2>
+      <figure>
+    <img class="intext-image" src="img/constellation.jpg" alt="Space Segment Graphic">
+  </figure>
+    <p class="intro">
+      GPS satellites orbit Earth and broadcast signals containing the time the signal was sent and information about the satellite’s position. 
+      A receiver uses those signals to estimate how far away the satellites are. Much of this information is taken care of in the space segment.
+    </p>
+    <details>
+      <summary>The Space Segment</summary>
+      <p>
+      The GPS space segment consists of satellites arranged in a constellation transmitting radio signals to users.
+      The US Space force commits to operating at least 24 GPS satellites, with a 95% uptime.
+      The space force has had 31 GPS satellites operating in the last decade, with 24 of them being operational at any given time.
+      </p>
+    </details>
+    <details>
+      <summary> Constellation Arrangement</summary>
+      <p>
+        GPS satellites fly in medium earth orbit at an altitude of about 20,200 kilometers (12,550 miles).
+        The satellites circle the Earth twice each day, and their orbits are arranged so that at least four satellites are visible from virtually any point on the planet.
+        Extra satellites are included in the constellation to improve accuracy and reliability, and to provide redundancy in case of satellite failures.
+        As of June 2011, the Air Force operates in the "Expandable 24" configuration, climbing up to a mostly 27-slot constellation in the modern day.
+      </p>
+    </details>
+    <details>
+      <summary> Current and Future Developments</summary>
+      <p>
+        The US Space Force continues to maintain and upgrade the GPS constellation, with plans to launch new satellites and improve the system's performance. 
+        Future developments may include enhanced signal capabilities, increased accuracy, and improved resistance to interference.
+      </p>
+    </details>
+    <h3>References</h3>
+    <p><a href="https://www.gps.gov/space-segment">https://www.gps.gov/space-segment</a></p>
+  </section>
+    <blockquote>
+    “<%= quote.text %>”
+  </blockquote>
+  <p>— <%= quote.author %></p>
+</main>
+<%- include('partials/footer.ejs') %>
+
+</body>
+</html>

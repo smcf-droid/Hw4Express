@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+<style>
+    body{ 
+        background-image: url("<%= image %>");
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <%- include('partials/nav.ejs') %>
+<section>
+    <figure>
+        <img src="<%= image %>" alt="NASA satellite imagery">
+    </figure>
+</section>
+    <blockquote>
+    “<%= quote.text %>”
+  </blockquote>
+  <p>— <%= quote.author %></p>
+</main>
+    <%- include('partials/footer.ejs') %>
+</body>
+</html>

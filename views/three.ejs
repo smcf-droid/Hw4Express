@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<%- include('partials/head.ejs') %>
+<body>
+  <%- include('partials/nav.ejs') %>
+  <main>
+
+  <section>
+    <h2>Maps and Accuracy </h2>
+      <figure>
+    <img class="intext-image" src="img/IIIA.jpg" alt="Accuracy of GPS">
+  </figure>
+    <p class="intro">
+      GPS attempts to achieve a high level of accuracy, but there are many factors that can affect the accuracy of GPS signals.
+      Most survey-grade receivers use two GPS radio frequencies, L1 and L2, but civilians are limited to one frequency (L1).
+      Modernization attempts to add a civilian L2 frequency to improve accuracy, but it is not yet widely available.
+    </p>
+    <details>
+      <summary> Mapping Applications</summary>
+      <p>
+        Mapping applications use GPS signals to determine a device's location and provide directions or other location-based services in
+        combination with existing digital mapping data. Route planning algorithms can even use GPS to predict traffic conditions and suggest alternative routes to avoid congestion.
+        Mapping applications may also use additional data sources, such as Wi-Fi or cellular signals, to improve location accuracy in addition to GPS signals.
+      </p>
+    </details>    
+    <details>
+      <summary> How Accurate is GPS?</summary>
+      <p>
+        GPS accuracy depends on several factors, including receiver quality, satellite geometry, signal blockage, atmospheric conditions, and the number of satellites in view.
+        Smartphones can be accurate to about 16 feet in open sky, but worsens in buildings.
+        High-end GPS receivers can be accurate to a few centimeters, with long-term measurements being within millimeters.
+      </p>
+    </details>
+    <details>
+      <summary> Military GPS  </summary>
+      <p>
+        The military using two frequencies allow improved accuracy by correcting signal distortions caused by the ionosphere.
+        The military grade receivers can be purchased, but are limited to professional use.
+      </p>
+    </details>
+    <details>
+      <summary> Does the Military Degrade Civilian Accuracy?</summary>
+      <p>
+        No, contrary to popular folklore, the military does not intentionally degrade civilian GPS accuracy.
+        The military did implore selective availability in the past, but it was discontinued in 2000.
+      </p>
+    </details>
+    <h3>References</h3>
+    <p><a href="https://www.gps.gov/gps-accuracy">https://www.gps.gov/gps-accuracy</a></p>
+  </section>
+    <blockquote>
+    “<%= quote.text %>”
+  </blockquote>
+  <p>— <%= quote.author %></p>
+</main>
+<%- include('partials/footer.ejs') %>
+</body>
+</html>
